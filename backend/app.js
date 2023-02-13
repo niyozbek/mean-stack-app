@@ -7,9 +7,12 @@ const postsRoutes = require('./routes/posts')
 const userRoutes = require('./routes/user')
 
 const app = express()
-
-mongoose.connect('mongodb+srv://neyo:' + process.env.MONGO_ATLAS_PW + '@cluster0.qkg3z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-  .then(() => {
+  mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  }).then(() => {
     console.log('Connected to database!')
   })
   .catch((error) => {
