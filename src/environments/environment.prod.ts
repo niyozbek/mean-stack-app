@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3005/api'
+  apiUrl: 'http://mean-app.projects.niyozbek.com/api'
 };
