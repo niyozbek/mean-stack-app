@@ -46,7 +46,7 @@ export class PostCreateComponent implements OnInit, OnDestroy {
       // there is no fitting element in the form.
       // we have hidden input and button here.
       // assigning to any of these will be incorrect
-      image: new FormControl(null, { validators: [Validators.required], asyncValidators: [mimeType] })
+      image: new FormControl(null, { validators: [Validators.required] })
     })
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has('postId')) {
